@@ -24,15 +24,15 @@ body {padding: 5px;}
 .sort-arrow.up {
   transform: rotate(180deg); /* Flipped state pointing up */
 }
-
-
+div#yearTitle.grid-title{text-align: right;}
+div#eventTitle.grid-title, div#hostTitle.grid-title, div#yearTitle.grid-title{cursor: pointer;}
 .artwork-container {
   display: grid; 
   gap: 10px; font-family: 'Instrument Serif', serif;
   grid-template-columns: 2fr 0.5fr 0.5fr;
   margin-bottom: 5px;
 }
-.event-header {margin-bottom: 10px;text-transform: uppercase;}
+.event-header {margin-bottom: 10px;}
 button{line-height: 0;}
 .carousel {
   display: flex;
@@ -107,11 +107,7 @@ sup{top:10px;padding-left:5px}
   }
 
 }
-.biocontainer {
 
-  grid-template-columns: 1fr;
-
-}
 .menu-header {
   display: flex;
   justify-content: space-between;

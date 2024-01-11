@@ -33,15 +33,15 @@ function filterArtworks() {
     // Get the selected value
     let selectedType = document.querySelector('input[name="displayType"]:checked').value;
 
-    // Get all grid items
-    let gridItems = document.querySelectorAll('.grid-item');
+    // Get all artwork containers
+    let artworkContainers = document.querySelectorAll('.artwork-container');
 
-    // Loop through grid items and display/hide based on the selected type
-    gridItems.forEach(function(item) {
-        if(item.getAttribute('data-type') === selectedType) {
-            item.style.display = 'block'; // Show the item
+    // Loop through artwork containers and display/hide based on the selected type
+    artworkContainers.forEach(function(container) {
+        if(container.getAttribute('data-type') === selectedType) {
+            container.style.display = 'grid'; // Display the entire container
         } else {
-            item.style.display = 'none'; // Hide the item
+            container.style.display = 'none'; // Hide the container
         }
     });
 }

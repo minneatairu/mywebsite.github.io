@@ -64,3 +64,26 @@ function filterArtworks() {
     });
 }
 
+//year sorting
+let sortOrder = 'ascending';
+
+document.getElementById('yearTitle').addEventListener('click', function() {
+    const container = document.querySelector('.grid-container');
+    let items = Array.from(container.querySelectorAll('.artwork-container:not(.event-header)'));
+
+    items.sort(function(a, b) {
+        const yearA = parseInt(a.querySelector('.year').textContent);
+        const yearB = parseInt(b.querySelector('.year').textContent);
+
+        if (sortOrder === 'ascending') {
+            return yearA - yearB;
+        } else {
+            return yearB - yearA;
+        }
+    });
+
+    items.forEach(item => container.appendChild(item));
+
+    // Toggle sort order for next click
+    sortOrder = sortOrder === 'ascending' ? 'descending' : 'ascending';
+});

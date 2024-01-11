@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MINNE ATAIRU: EVENTS</title>
+    <title>MINNE ATAIRU: INDEX</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -16,38 +16,64 @@
     <h1>INDEX</h1>
         <!-- Radio buttons for choosing between "Images" and "Text" -->
         <div class="radio-container">
-            <label for="images">EXHIBITIONS</label>
+            <label for="images">TALK</label>
             <input type="radio" id="images" name="displayType" value="images">
-            <label for="text">TALKS</label>
+            <label for="text">EXHIBITION</label>
             <input type="radio" id="text" name="displayType" value="text">
         </div>
     
     <!-- Create the grid container -->
     <div class="grid-container">
-        <!-- Row 1 -->
-        <div class="grid-item"  data-type="images">Artwork 1</div>
-        <div class="grid-item">Oil on Canvas</div>
-        <div class="grid-item">2020</div>
-        
-        <!-- Row 2 -->
-        <div class="grid-item" data-type="text">Artwork 2</div>
-        <div class="grid-item">Watercolor</div>
-        <div class="grid-item">2018</div>
-        
-        <!-- Row 3 -->
-        <div class="grid-item" data-type="text">Artwork 3</div>
-        <div class="grid-item">Sculpture</div>
-        <div class="grid-item">2022</div>
-        
-        <!-- Row 4 -->
-        <div class="grid-item">Artwork 4</div>
-        <div class="grid-item">Photography</div>
-        <div class="grid-item">2019</div>
-        
-        <!-- Row 5 -->
-        <div class="grid-item">Artwork 5</div>
-        <div class="grid-item">Acrylic on Canvas</div>
-        <div class="grid-item">2021</div>
+
+        <div class="artwork-container event-header">
+            <div class="grid-title">Event</div> <!-- Adjust the text as needed -->
+            <div class="grid-title">HOST</div>
+            <div class="grid-title" >Year</div>
+        </div>
+    
+<!-- For Exhibition Artworks -->
+<div class="artwork-container" data-type="images">
+    <div class="grid-item">Small Voice<sup style="top:0">[UPCOMING]</sup></div>
+    <div class="grid-item">Honor Fraser Gallery</div>
+    <div class="grid-item">2024</div>
+</div>
+<!-- ... other exhibition artworks ... -->
+
+<!-- For Talk Artworks -->
+<div class="artwork-container" data-type="text">
+    <div class="grid-item">Talk 1</div>
+    <div class="grid-item">UCLA, University of Cambridge</div>
+    <div class="grid-item">2023</div>
+</div>
+<!-- ... other talk artworks ... -->
+<!-- For Exhibition Artworks -->
+<div class="artwork-container" data-type="images">
+    <div class="grid-item">Artwork 1</div>
+    <div class="grid-item">The Shed</div>
+    <div class="grid-item">2023</div>
+</div>
+<!-- ... other exhibition artworks ... -->
+
+<!-- For Talk Artworks -->
+<div class="artwork-container" data-type="text">
+    <div class="grid-item">Talk 1</div>
+    <div class="grid-item">The Shed</div>
+    <div class="grid-item">2023</div>
+</div>
+
+<div class="artwork-container" data-type="text">
+    <div class="grid-item">Talk 1</div>
+    <div class="grid-item">Bard College</div>
+    <div class="grid-item">2023</div>
+</div>
+
+<div class="artwork-container" data-type="text">
+    <div class="grid-item">Talk 1</div>
+    <div class="grid-item">UCLA</div>
+    <div class="grid-item">2023</div>
+</div>
+<!-- ... other talk artworks ... -->
+
     </div>
 
     <script type="text/javascript" src="main.js"></script>

@@ -31,7 +31,6 @@ button{line-height: 0;}
 
 .carousel-item {
   flex: 0 0 33.33%;
-  /* For 3 items in view */
   padding: 5px;
   display: flex;
   flex-direction: column;
@@ -91,13 +90,17 @@ sup{top:10px;padding-left:5px}
 }
 
 
-@media screen and (max-width: 600px) { /* Adjust the max-width as needed */
+@media screen and (max-width: 768px) { /* Adjust the max-width as needed */
   .carousel-item {
       flex: 0 0 100%; /* For 1 item in view on mobile */
   }
 
 }
+.biocontainer {
 
+  grid-template-columns: 1fr;
+
+}
 .menu-header {
   display: flex;
   justify-content: space-between;

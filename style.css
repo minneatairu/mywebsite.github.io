@@ -111,7 +111,8 @@ H1{  font-family: 'Instrument Serif', serif;}
         align-items: center;
     }
 
-    .radio-container label {
+    .radio-container label {    gap: 10px;  font-family: 'Instrument Serif', serif;
+
         margin-right: 10px;
     }
     /* Style square radio buttons */

@@ -98,7 +98,7 @@ button{line-height: 0;}
   margin-top: auto;
   font-family: 'Instrument Serif', serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; line-height: 1.2;
 }
 sup{top:10px;padding-left:5px}
 .year {
@@ -112,7 +112,7 @@ sup{top:10px;padding-left:5px}
       flex: 0 0 100%; /* For 1 item in view on mobile */
   }
   .index-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr)!important;
 }
 
 .biocontainer {

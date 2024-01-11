@@ -22,9 +22,7 @@ body, html {
 
 .carousel-item {
   flex: 0 0 33.33%; /* For 3 items in view */
-  text-align: center;
   padding: 5px;
-  height: calc(100% - 40px); /* Adjust height to make space for caption */
   display: flex;
   flex-direction: column;
 }
@@ -44,7 +42,7 @@ body, html {
 }
 
 .carousel-button.prev {
-  right: 60px; /* Position slightly to the left of the next button */
+left: 10px; /* Position slightly to the left of the next button */
 
 }
 
@@ -54,5 +52,5 @@ body, html {
 }
 
 .caption {
-  margin-top: auto; /* Pushes the caption to the bottom */
+  margin-top: auto; font-family: 'Instrument Serif', serif;
 }

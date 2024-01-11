@@ -15,7 +15,7 @@ html {
   width: 100%;
   height: 100%;
 }
-
+button{line-height: 0;}
 .carousel {
   display: flex;
   overflow: hidden;
@@ -41,11 +41,9 @@ html {
 .carousel-button {
   border: none;
   cursor: pointer;
-  transform: translateY(-50%);
   font-family: 'Instrument Serif', serif;
   position: absolute;
-  bottom: 10px;
-  /* Position at the bottom */
+  bottom: 3px;
 }
 
 .carousel-button.prev {
@@ -65,8 +63,29 @@ html {
   display: flex;
   justify-content: space-between;
 }
-
+sup{top:10px!important;padding-left:5px}
 .year {
   text-align: right;
   margin-left: auto;
+}
+
+
+@media screen and (max-width: 600px) { /* Adjust the max-width as needed */
+  .carousel-item {
+      flex: 0 0 100%; /* For 1 item in view on mobile */
+  }
+
+  /* Optionally, adjust the size of the buttons and text for smaller screens */
+  .carousel-button {
+      padding: 5px 10px; /* Smaller buttons */
+      font-size: 12px; /* Smaller text */
+  }
+
+  .caption {
+      font-size: 14px; /* Adjust caption text size for mobile */
+  }
+
+  .year {
+      font-size: 14px; /* Adjust year text size for mobile */
+  }
 }

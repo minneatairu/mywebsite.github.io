@@ -54,7 +54,7 @@
               </div>        </div>
 
         <div class="index-item"  data-type="text">
-            <img src="media/bhand.png" alt="Image 1">
+            <img src="media/hand.png" alt="Image 1">
             <div class="caption">TO THE HAND
                 <span class="year">2023</span>
               </div>        </div>
@@ -152,13 +152,60 @@
         
         
                 <div class="index-item"  data-type="text">
-                    <img src="media/beads.jpg" alt="Image 1">
+                    <img src="exhibitions/vermont.jpg" alt="Image 1">
                     <div class="caption">7
                         <span class="year">2024</span>
                       </div>        </div>
 
 </div>
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* Create 6 columns in the grid */
+        gap: 10px; /* Adjust the gap between items as needed */
+    }
+    
+    .item {
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%; /* Creates a square aspect ratio (1:1) for each item */
+        overflow: hidden;
+    }
+    
+    .portrait {
+        grid-column: span 1; /* Portrait images occupy 1 column */
+    }
 
+    .landscape {
+        grid-column: span 2; /* Landscape images occupy 2 columns */
+    }
+
+    .item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Maintains the aspect ratio and covers the entire container */
+    }
+</style>
+
+<div class="grid">
+    <div class="item portrait">
+        <img src="portrait-image1.jpg" alt="Portrait Image 1">
+    </div>
+    <div class="item portrait">
+        <img src="portrait-image2.jpg" alt="Portrait Image 2">
+    </div>
+    <div class="item landscape">
+        <img src="landscape-image1.jpg" alt="Landscape Image 1">
+    </div>
+    <div class="item portrait">
+        <img src="portrait-image3.jpg" alt="Portrait Image 3">
+    </div>
+    <div class="item portrait">
+        <img src="portrait-image4.jpg" alt="Portrait Image 4">
+    </div>
+    <!-- Add more items as needed -->
+</div>
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

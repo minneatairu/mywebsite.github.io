@@ -127,7 +127,7 @@ button {
 .caption-text sup {
   top: 10px;
   padding-left: 5px;
-  vertical-align: baseline; /* Aligns sup tag with the baseline of the text */
+  vertical-align: top; /* Aligns sup tag with the baseline of the text */
 
 }
 
@@ -142,7 +142,6 @@ button {
 
 .caption-text {
   display: flex;
-  align-items: baseline; /* Aligns baseline of the text and the sup tag */
 }
 
 

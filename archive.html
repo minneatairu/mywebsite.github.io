@@ -14,10 +14,17 @@
         .index-container {
             display: grid;
             grid-template-columns: repeat(6, 1fr); /* 4 columns */
-            column-gap: 10px; /* Gap between items */
+            column-gap: 10px;
+            grid-auto-rows: 50vh; /* Each row is 50% of the viewport height */
+
         }
 
  
+        .index-item img {
+        max-width: 100%; /* Maximum width is 100% of container */
+        max-height: 100%; /* Maximum height is 100% of container */
+        object-fit: contain; /* Ensures images fit without being cropped */
+    }
 
     </style>
 </head>
@@ -140,7 +147,7 @@
                       </div>        </div>
         
                 <div class="index-item"  data-type="images" >
-                    <img src="media/igun.png" alt="Image 1">
+                    <img src="media/igun.jpg" alt="Image 1">
                     <div class="caption">IGÙN <sup>[AI]</sup>
                         <span class="year">2020 - </span>
                       </div>        </div>

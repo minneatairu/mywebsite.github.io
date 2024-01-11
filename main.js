@@ -102,7 +102,7 @@ document.querySelectorAll('.grid-title').forEach(title => {
 });
 
 
-//index image filter
+//ARCHIVE: image filter
 
 const imagesRadio = document.getElementById("images");
 const textRadio = document.getElementById("text");

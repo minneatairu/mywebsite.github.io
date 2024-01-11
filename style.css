@@ -20,6 +20,7 @@ html {
   gap: 10px; font-family: 'Instrument Serif', serif;
   grid-template-columns: 2fr 1fr 1fr;
 }
+.event-header {margin-bottom: 20px;text-transform: uppercase;}
 button{line-height: 0;}
 .carousel {
   display: flex;

@@ -67,23 +67,33 @@ function filterArtworks() {
 //year sorting
 let sortOrder = 'ascending';
 
-document.getElementById('yearTitle').addEventListener('click', function() {
+function sortItems(columnClass) {
     const container = document.querySelector('.grid-container');
     let items = Array.from(container.querySelectorAll('.artwork-container:not(.event-header)'));
 
     items.sort(function(a, b) {
-        const yearA = parseInt(a.querySelector('.year').textContent);
-        const yearB = parseInt(b.querySelector('.year').textContent);
+        const textA = a.querySelector('.' + columnClass).textContent.trim();
+        const textB = b.querySelector('.' + columnClass).textContent.trim();
 
         if (sortOrder === 'ascending') {
-            return yearA - yearB;
+            return textA.localeCompare(textB);
         } else {
-            return yearB - yearA;
+            return textB.localeCompare(textA);
         }
     });
 
     items.forEach(item => container.appendChild(item));
-
-    // Toggle sort order for next click
     sortOrder = sortOrder === 'ascending' ? 'descending' : 'ascending';
+}
+
+document.getElementById('eventTitle').addEventListener('click', function() {
+    sortItems('event');
+});
+
+document.getElementById('hostTitle').addEventListener('click', function() {
+    sortItems('host');
+});
+
+document.getElementById('yearTitle').addEventListener('click', function() {
+    sortItems('year');
 });

@@ -122,17 +122,29 @@ button {
 
 }
 
+
+
+sup {
+  top: 10px;
+  padding-left: 5px
+}
+
 .caption {
   margin-top: auto;
   font-family: 'Instrument Serif', serif;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   line-height: 1.2;
 }
 
-sup {
-  top: 10px;
-  padding-left: 5px
+.caption-text {
+  display: flex;
+  align-items: center; /
+}
+
+.caption-text sup {
+  margin-left: 0.25em;
 }
 
 

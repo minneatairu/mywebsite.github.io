@@ -103,31 +103,31 @@ document.querySelectorAll('.grid-title').forEach(title => {
 
 
 //ARCHIVE: image filter
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the radio buttons
+    var radioButtons = document.querySelectorAll('input[name="displayType"]');
 
-const imagesRadio = document.getElementById("images");
-const textRadio = document.getElementById("text");
-const indexItems = document.querySelectorAll(".index-item");
-
-// Add event listeners to radio buttons
-imagesRadio.addEventListener("change", () => {
-    filterItems("images");
-});
-
-textRadio.addEventListener("change", () => {
-    filterItems("text");
-});
-
-function filterItems(type) {
-    indexItems.forEach((item) => {
-        if (type === "images" && item.getAttribute("data-type") === "images") {
-            item.classList.remove("hidden");
-        } else if (type === "text" && item.getAttribute("data-type") === "text") {
-            item.classList.remove("hidden");
-        } else {
-            item.classList.add("hidden");
-        }
+    // Add a change event listener to each radio button
+    radioButtons.forEach(function(radio) {
+        radio.addEventListener('change', onRadioChange);
     });
-}
 
-// Initialize the filter
-filterItems("images"); // Initially show images
+    function onRadioChange() {
+        // Get the currently selected radio button's value
+        var selectedType = document.querySelector('input[name="displayType"]:checked').value;
+
+        // Get all the index items
+        var indexItems = document.querySelectorAll('.index-item');
+
+        // Loop through each index item
+        indexItems.forEach(function(item) {
+            // If the item's data-type matches the selected radio button's value or if the 'all' option is selected, show the item
+            if (item.getAttribute('data-type') === selectedType || selectedType === 'all') {
+                item.style.display = 'block';
+            } else {
+                // Otherwise, hide the item
+                item.style.display = 'none';
+            }
+        });
+    }
+});

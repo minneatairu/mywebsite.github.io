@@ -23,7 +23,10 @@ body, html {
 .carousel-item {
   flex: 0 0 33.33%; /* For 3 items in view */
   text-align: center;
-  padding: 5px; /* Optional, for spacing between images */
+  padding: 5px;
+  height: calc(100% - 40px); /* Adjust height to make space for caption */
+  display: flex;
+  flex-direction: column;
 }
 
 .carousel-item img {
@@ -34,7 +37,6 @@ body, html {
 
 .carousel-button {
   border: none;
-  padding: 10px 20px;
   cursor: pointer;
   transform: translateY(-50%);font-family: 'Instrument Serif', serif;
   position: absolute;
@@ -42,13 +44,12 @@ body, html {
 }
 
 .carousel-button.prev {
-  left: 10px;
   right: 60px; /* Position slightly to the left of the next button */
 
 }
 
 .carousel-button.next {
-  right: 10px;    right: 10px; /* Position slightly to the left of the next button */
+  right: 10px;   
 
 }
 

@@ -15,13 +15,14 @@ body {padding: 5px;}
   width: 100%;
   height: 100%;
 }
-.arrow {
+.sort-arrow {
   display: inline-block;
-  margin-left: 5px;
+  transform: rotate(0deg); /* Default state pointing down */
+  transition: transform 0.3s ease-in-out;
 }
 
-.arrow-up {
-  transform: rotate(180deg);
+.sort-arrow.up {
+  transform: rotate(180deg); /* Flipped state pointing up */
 }
 
 

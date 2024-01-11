@@ -67,9 +67,10 @@ function filterArtworks() {
 //year sorting
 let sortOrder = 'ascending';
 
-function sortItems(columnClass) {
+function sortItems(columnClass, clickedTitle) {
     const container = document.querySelector('.grid-container');
     let items = Array.from(container.querySelectorAll('.artwork-container:not(.event-header)'));
+    const arrow = clickedTitle.querySelector('.sort-arrow');
 
     items.sort(function(a, b) {
         const textA = a.querySelector('.' + columnClass).textContent.trim();
@@ -84,16 +85,18 @@ function sortItems(columnClass) {
 
     items.forEach(item => container.appendChild(item));
     sortOrder = sortOrder === 'ascending' ? 'descending' : 'ascending';
+
+    // Update arrow direction
+    if (sortOrder === 'ascending') {
+        arrow.classList.add('up');
+    } else {
+        arrow.classList.remove('up');
+    }
 }
 
-document.getElementById('eventTitle').addEventListener('click', function() {
-    sortItems('event');
-});
-
-document.getElementById('hostTitle').addEventListener('click', function() {
-    sortItems('host');
-});
-
-document.getElementById('yearTitle').addEventListener('click', function() {
-    sortItems('year');
+document.querySelectorAll('.grid-title').forEach(title => {
+    title.addEventListener('click', function() {
+        const columnClass = this.id.replace('Title', '').toLowerCase();
+        sortItems(columnClass, this);
+    });
 });

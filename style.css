@@ -19,8 +19,9 @@ html {
   display: grid; 
   gap: 10px; font-family: 'Instrument Serif', serif;
   grid-template-columns: 2fr 1fr 1fr;
+  margin-bottom: 5px;
 }
-.event-header {margin-bottom: 20px;text-transform: uppercase;}
+.event-header {margin-bottom: 10px;text-transform: uppercase;}
 button{line-height: 0;}
 .carousel {
   display: flex;
@@ -140,7 +141,4 @@ H1{  font-family: 'Instrument Serif', serif;}
   display: contents; /* This ensures the header aligns with the grid */
 }
 
-.grid-title {
-  font-weight: bold; /* Example styling for titles */
-  /* Add more styling as needed */
-}
+

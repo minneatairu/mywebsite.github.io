@@ -111,7 +111,13 @@ sup{top:10px;padding-left:5px}
   .carousel-item {
       flex: 0 0 100%; /* For 1 item in view on mobile */
   }
+  .index-container {
+    grid-template-columns: repeat(2, 1fr);
+}
 
+.biocontainer {
+  grid-template-columns: 1fr; 
+}
 }
 
 .menu-header {

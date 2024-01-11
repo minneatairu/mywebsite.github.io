@@ -126,7 +126,7 @@ H1{  font-family: 'Instrument Serif', serif;}
       border-radius: 0; /* Remove border radius to make it square */
       outline: none;
   }
-
+.upcoming {background:lime}
   /* Style radio button when checked */
   input[type="radio"]:checked {
       background-color: #000; /* Change the background color when checked */

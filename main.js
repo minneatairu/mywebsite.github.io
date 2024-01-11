@@ -65,30 +65,27 @@ function filterArtworks() {
 }
 
 //sorting year
-
-let sortDescending = false; // Tracks the sort order
+let sortOrder = 'asc'; // Keeps track of the current sort order
 
 document.getElementById('year-header').addEventListener('click', function() {
-    sortArtworksByYear();
-});
+    let containers = Array.from(document.querySelectorAll('.artwork-container'));
+    containers.sort(function(a, b) {
+        let yearA = parseInt(a.children[2].textContent, 10); // Assuming year is the third child
+        let yearB = parseInt(b.children[2].textContent, 10);
 
-function sortArtworksByYear() {
-    let artworks = Array.from(document.querySelectorAll('.artwork-container'));
-    artworks.sort(function(a, b) {
-        let yearA = a.querySelector('.grid-item:nth-child(3)').textContent; // Assuming the year is the third item
-        let yearB = b.querySelector('.grid-item:nth-child(3)').textContent;
-
-        // Convert to numbers for comparison
-        yearA = parseInt(yearA, 10);
-        yearB = parseInt(yearB, 10);
-
-        return sortDescending ? yearB - yearA : yearA - yearB;
+        if (sortOrder === 'asc') {
+            return yearA - yearB;
+        } else {
+            return yearB - yearA;
+        }
     });
 
-    // Append sorted artworks back to the container
-    const container = document.querySelector('.grid-container');
-    artworks.forEach(artwork => container.appendChild(artwork));
+    // Update the grid with the sorted containers
+    let gridContainer = document.querySelector('.grid-container');
+    containers.forEach(container => gridContainer.appendChild(container)); // Re-append in sorted order
 
-    // Toggle the sorting order for the next click
-    sortDescending = !sortDescending;
+    // Toggle the sort order for the next click
+    sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
+});
+
 }

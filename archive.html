@@ -15,14 +15,19 @@
             display: grid;
             grid-template-columns: repeat(6, 1fr); /* 4 columns */
             column-gap: 10px;
-            grid-auto-rows: 50vh; /* Each row is 50% of the viewport height */
 
         }
+        .index-item {
+        height: 50vh; /* Set height of each item */
+        overflow: hidden; /* Ensures content does not spill out */
+        display: flex;
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+    }
 
-        .index-item img {
-        max-width: 100%; /* Maximum width is 100% of container */
-        max-height: 100%; /* Maximum height is 100% of container */
-        object-fit: contain; /* Ensures images fit without being cropped */
+    .index-item img {
+        max-height: 100%; /* Ensure the image's maximum height is the item height */
+        object-fit: contain; /* Ensures images are contained without distortion */
     }
 
     </style>

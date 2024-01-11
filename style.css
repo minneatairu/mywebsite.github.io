@@ -7,7 +7,7 @@ html {
   overflow: hidden;
   /* Prevent scrolling */
 }
-
+body {padding: 5px;}
 .carousel-container {
   display: flex;
   align-items: center;

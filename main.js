@@ -64,28 +64,3 @@ function filterArtworks() {
     });
 }
 
-//sorting year
-let sortOrder = 'asc'; // Keeps track of the current sort order
-
-document.getElementById('year-header').addEventListener('click', function() {
-    let containers = Array.from(document.querySelectorAll('.artwork-container'));
-    containers.sort(function(a, b) {
-        let yearA = parseInt(a.children[2].textContent, 10); // Assuming year is the third child
-        let yearB = parseInt(b.children[2].textContent, 10);
-
-        if (sortOrder === 'asc') {
-            return yearA - yearB;
-        } else {
-            return yearB - yearA;
-        }
-    });
-
-    // Update the grid with the sorted containers
-    let gridContainer = document.querySelector('.grid-container');
-    containers.forEach(container => gridContainer.appendChild(container)); // Re-append in sorted order
-
-    // Toggle the sort order for the next click
-    sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
-});
-
-}

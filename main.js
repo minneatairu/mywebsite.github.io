@@ -104,30 +104,37 @@ document.querySelectorAll('.grid-title').forEach(title => {
 
 //ARCHIVE: image filter
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the radio buttons
+    var lastChecked;
     var radioButtons = document.querySelectorAll('input[name="displayType"]');
 
-    // Add a change event listener to each radio button
     radioButtons.forEach(function(radio) {
-        radio.addEventListener('change', onRadioChange);
+        radio.addEventListener('click', function(e) {
+            if (e.target === lastChecked) {
+                e.target.checked = false;
+                lastChecked = null;
+                showAllItems();
+            } else {
+                lastChecked = e.target;
+                filterItems(e.target.value);
+            }
+        });
     });
 
-    function onRadioChange() {
-        // Get the currently selected radio button's value
-        var selectedType = document.querySelector('input[name="displayType"]:checked').value;
-
-        // Get all the index items
+    function filterItems(selectedType) {
         var indexItems = document.querySelectorAll('.index-item');
-
-        // Loop through each index item
         indexItems.forEach(function(item) {
-            // If the item's data-type matches the selected radio button's value or if the 'all' option is selected, show the item
-            if (item.getAttribute('data-type') === selectedType || selectedType === 'all') {
+            if (item.getAttribute('data-type') === selectedType) {
                 item.style.display = 'block';
             } else {
-                // Otherwise, hide the item
                 item.style.display = 'none';
             }
+        });
+    }
+
+    function showAllItems() {
+        var indexItems = document.querySelectorAll('.index-item');
+        indexItems.forEach(function(item) {
+            item.style.display = 'block';
         });
     }
 });

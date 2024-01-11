@@ -18,7 +18,7 @@ html {
 .artwork-container {
   display: grid; /* This makes each container a grid */
   grid-template-columns: repeat(3, 1fr); /* Three columns within each container */
-  gap: 10px; /* Adjust spacing between items if needed */
+  gap: 10px; font-family: 'Instrument Serif', serif;
 }
 button{line-height: 0;}
 .carousel {

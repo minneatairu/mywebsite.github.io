@@ -130,10 +130,16 @@ H1{  font-family: 'Instrument Serif', serif;}
       background-color: #000; /* Change the background color when checked */
   }
 
-  .artwork-container {
-    transition: border-bottom 0.3s; /* Optional: for smooth transition */
-}
 
 .artwork-container:hover {
     border-bottom: 1px solid #000; /* Adjust the color and size as needed */
+}
+
+.grid-header {
+  display: contents; /* This ensures the header aligns with the grid */
+}
+
+.grid-title {
+  font-weight: bold; /* Example styling for titles */
+  /* Add more styling as needed */
 }

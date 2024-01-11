@@ -15,6 +15,9 @@ html {
   width: 100%;
   height: 100%;
 }
+.artwork-container {
+  display: contents; /* This makes the container not affect the grid layout */
+}
 button{line-height: 0;}
 .carousel {
   display: flex;

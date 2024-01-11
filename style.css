@@ -10,8 +10,15 @@
 }
 
 .carousel-item {
-  min-width: 33.33%; /* For 3 items in view */
+  flex: 0 0 33.33%; /* For 3 items in view */
   text-align: center;
+  padding: 5px; /* Optional, for spacing between images */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Adjust as needed for portrait images */
+  object-fit: cover; /* Ensures images cover the entire item area */
 }
 
 .carousel-button {

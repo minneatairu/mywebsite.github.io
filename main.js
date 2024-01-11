@@ -65,35 +65,45 @@ function filterArtworks() {
 }
 
 //year sorting
-let sortOrder = 'ascending';
+let currentSortColumn = null;
 
-function sortItems(columnClass) {
+function sortItems(columnClass, arrowId) {
     const container = document.querySelector('.grid-container');
     let items = Array.from(container.querySelectorAll('.artwork-container:not(.event-header)'));
+
+    // Reset all arrows to default state
+    document.querySelectorAll('.arrow').forEach(arrow => arrow.textContent = '↓');
+
+    if (currentSortColumn !== columnClass || sortOrder === 'descending') {
+        sortOrder = 'ascending';
+        document.getElementById(arrowId).textContent = '↑';
+    } else {
+        sortOrder = 'descending';
+        document.getElementById(arrowId).textContent = '↓';
+    }
 
     items.sort(function(a, b) {
         const textA = a.querySelector('.' + columnClass).textContent.trim();
         const textB = b.querySelector('.' + columnClass).textContent.trim();
 
-        if (sortOrder === 'ascending') {
-            return textA.localeCompare(textB);
-        } else {
-            return textB.localeCompare(textA);
+        if (columnClass === 'year') { // Sort numerically for year
+            return sortOrder === 'ascending' ? parseInt(textA) - parseInt(textB) : parseInt(textB) - parseInt(textA);
+        } else { // Sort alphabetically for event and host
+            return sortOrder === 'ascending' ? textA.localeCompare(textB) : textB.localeCompare(textA);
         }
     });
 
     items.forEach(item => container.appendChild(item));
-    sortOrder = sortOrder === 'ascending' ? 'descending' : 'ascending';
+    currentSortColumn = columnClass;
 }
 
 document.getElementById('eventTitle').addEventListener('click', function() {
-    sortItems('event');
+    sortItems('event', 'arrowEvent');
 });
 
 document.getElementById('hostTitle').addEventListener('click', function() {
-    sortItems('host');
+    sortItems('host', 'arrowHost');
 });
 
 document.getElementById('yearTitle').addEventListener('click', function() {
-    sortItems('year');
-});
+   

@@ -26,7 +26,14 @@ body {padding: 5px;}
 }
 div#yearTitle.grid-title{text-align: right;}
 div#eventTitle.grid-title, div#hostTitle.grid-title, div#yearTitle.grid-title{cursor: pointer;}
+
 .artwork-container {
+  display: grid; 
+  gap: 10px; font-family: 'Instrument Serif', serif;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+  margin-bottom: 5px;
+}
+.event-container {
   display: grid; 
   gap: 10px; font-family: 'Instrument Serif', serif;
   grid-template-columns: 2fr 0.5fr 0.5fr;

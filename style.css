@@ -25,6 +25,10 @@ body {
   /* Default state pointing down */
   transition: transform 0.3s ease-in-out;
 }
+.carousel-item a {    height: 100%;
+  /* padding: 11px; */
+  display: flex;
+  flex-direction: column;}
 
 .sort-arrow.up {
   transform: rotate(180deg);

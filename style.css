@@ -63,14 +63,34 @@ button{line-height: 0;}
   right: 5px;
 
 }
+.biocontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.biorow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.biocolumn {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
 .caption {
   margin-top: auto;
   font-family: 'Instrument Serif', serif;
   display: flex;
   justify-content: space-between;
 }
-sup{top:10px!important;padding-left:5px}
+sup{top:10px;padding-left:5px}
 .year {
   text-align: right;
   margin-left: auto;
@@ -100,7 +120,7 @@ sup{top:10px!important;padding-left:5px}
 }
 
 
-H1{  font-family: 'Instrument Serif', serif;}
+H1,p{  font-family: 'Instrument Serif', serif;}
 
 
 

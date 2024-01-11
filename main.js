@@ -1,4 +1,4 @@
-the carousel is still not working. here is my js - // CAROUSEL: HOME
+// CAROUSEL: HOME
 document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');

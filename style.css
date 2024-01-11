@@ -6,7 +6,11 @@ html {
   height: 100%;
 
 }
-body {padding: 5px;}
+
+body {
+  padding: 5px;
+}
+
 .carousel-container {
   display: flex;
   align-items: center;
@@ -14,32 +18,53 @@ body {padding: 5px;}
   width: 100%;
   height: 100%;
 }
+
 .sort-arrow {
   display: inline-block;
-  transform: rotate(0deg); /* Default state pointing down */
+  transform: rotate(0deg);
+  /* Default state pointing down */
   transition: transform 0.3s ease-in-out;
 }
 
 .sort-arrow.up {
-  transform: rotate(180deg); /* Flipped state pointing up */
+  transform: rotate(180deg);
+  /* Flipped state pointing up */
 }
-div#yearTitle.grid-title{text-align: right;}
-div#eventTitle.grid-title, div#hostTitle.grid-title, div#yearTitle.grid-title{cursor: pointer;}
+
+div#yearTitle.grid-title {
+  text-align: right;
+}
+
+div#eventTitle.grid-title,
+div#hostTitle.grid-title,
+div#yearTitle.grid-title {
+  cursor: pointer;
+}
 
 .artwork-container {
-  display: grid; 
-  gap: 10px; font-family: 'Instrument Serif', serif;
+  display: grid;
+  gap: 10px;
+  font-family: 'Instrument Serif', serif;
   grid-template-columns: 2fr 0.5fr 0.5fr;
   margin-bottom: 5px;
 }
+
 .event-container {
-  display: grid; 
-  gap: 10px; font-family: 'Instrument Serif', serif;
+  display: grid;
+  gap: 10px;
+  font-family: 'Instrument Serif', serif;
   grid-template-columns: 2fr 0.5fr 0.5fr;
   margin-bottom: 5px;
 }
-.event-header {margin-bottom: 10px;}
-button{line-height: 0;}
+
+.event-header {
+  margin-bottom: 10px;
+}
+
+button {
+  line-height: 0;
+}
+
 .carousel {
   display: flex;
   overflow: hidden;
@@ -58,7 +83,6 @@ button{line-height: 0;}
   height: 100%;
   /* Full height of the item */
   object-fit: cover;
-  /* Ensures images cover the entire item area */
 }
 
 .carousel-button {
@@ -71,7 +95,6 @@ button{line-height: 0;}
 
 .carousel-button.prev {
   left: 5px;
-  /* Position slightly to the left of the next button */
 
 }
 
@@ -79,6 +102,7 @@ button{line-height: 0;}
   right: 5px;
 
 }
+
 .biocontainer {
   margin: 0 auto;
   display: grid;
@@ -92,28 +116,41 @@ button{line-height: 0;}
 .biocolumn {
   flex-basis: calc(33.33% - 20px);
   margin: 10px;
-  
+
 }
+
 .caption {
   margin-top: auto;
   font-family: 'Instrument Serif', serif;
   display: flex;
-  justify-content: space-between; line-height: 1.2;
+  justify-content: space-between;
+  line-height: 1.2;
 }
-sup{top:10px;padding-left:5px}
+
+sup {
+  top: 10px;
+  padding-left: 5px
+}
 
 
-@media screen and (max-width: 768px) { /* Adjust the max-width as needed */
+@media screen and (max-width: 768px) {
+
+  /* Adjust the max-width as needed */
   .carousel-item {
-      flex: 0 0 100%; /* For 1 item in view on mobile */
+    flex: 0 0 100%;
   }
+
   .index-container {
-    grid-template-columns: repeat(2, 1fr)!important;
-}
-.event-header{display:none;}
-.biocontainer {
-  grid-template-columns: 1fr; 
-}
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .event-header {
+    display: none;
+  }
+
+  .biocontainer {
+    grid-template-columns: 1fr;
+  }
 
 
 
@@ -123,57 +160,73 @@ sup{top:10px;padding-left:5px}
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:0 5px;
+  padding: 0 5px;
 }
 
 .menu-header a {
   text-decoration: none;
-  color: #000; /* Example text color */
+  color: #000;
+  /* Example text color */
   font-size: 16px;
   font-family: 'Instrument Serif', serif;
 
 }
 
 
-H1,p{  font-family: 'Instrument Serif', serif;}
+H1,
+p {
+  font-family: 'Instrument Serif', serif;
+}
 
 
+.radio-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
 
-       /* Style the radio buttons and labels */
-       .radio-container {
-        display: flex;
-        align-items: center;    margin-bottom: 20px; justify-content: center; 
-    }
-
-    .radio-container label {    gap: 10px;  font-family: 'Instrument Serif', serif;    margin-left: 30px;
+.radio-container label {
+  gap: 10px;
+  font-family: 'Instrument Serif', serif;
+  margin-left: 30px;
 
 
-        margin-right: 10px;
-    }
-    /* Style square radio buttons */
-    input[type="radio"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 13px; /* Set the width and height to create a square */
-      height: 13px;
-      border: 1px solid #000; /* Add a border for the square shape */
-      border-radius: 0; /* Remove border radius to make it square */
-      outline: none;
-  }
-.upcoming {background:lime}
-  /* Style radio button when checked */
-  input[type="radio"]:checked {
-      background-color: #000; /* Change the background color when checked */
-  }
+  margin-right: 10px;
+}
+
+/* Style square radio buttons */
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 13px;
+  /* Set the width and height to create a square */
+  height: 13px;
+  border: 1px solid #000;
+  /* Add a border for the square shape */
+  border-radius: 0;
+  /* Remove border radius to make it square */
+  outline: none;
+}
+
+.upcoming {
+  background: lime
+}
+
+/* Style radio button when checked */
+input[type="radio"]:checked {
+  background-color: #000;
+  /* Change the background color when checked */
+}
 
 
 .artwork-container:hover {
-    border-bottom: 1px solid #000; /* Adjust the color and size as needed */
+  border-bottom: 1px solid #000;
+  /* Adjust the color and size as needed */
 }
 
 .grid-header {
-  display: contents; /* This ensures the header aligns with the grid */
+  display: contents;
+  /* This ensures the header aligns with the grid */
 }
-
-

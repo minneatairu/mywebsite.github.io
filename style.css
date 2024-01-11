@@ -16,9 +16,9 @@ html {
   height: 100%;
 }
 .artwork-container {
-  display: grid; /* This makes each container a grid */
-  grid-template-columns: repeat(3, 1fr); /* Three columns within each container */
+  display: grid; 
   gap: 10px; font-family: 'Instrument Serif', serif;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 button{line-height: 0;}
 .carousel {
@@ -105,10 +105,11 @@ H1{  font-family: 'Instrument Serif', serif;}
        /* Style the radio buttons and labels */
        .radio-container {
         display: flex;
-        align-items: center;
+        align-items: center;    margin-bottom: 20px; justify-content: center; 
     }
 
-    .radio-container label {    gap: 10px;  font-family: 'Instrument Serif', serif;
+    .radio-container label {    gap: 10px;  font-family: 'Instrument Serif', serif;    margin-left: 30px;
+
 
         margin-right: 10px;
     }
@@ -117,8 +118,8 @@ H1{  font-family: 'Instrument Serif', serif;}
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      width: 20px; /* Set the width and height to create a square */
-      height: 20px;
+      width: 13px; /* Set the width and height to create a square */
+      height: 13px;
       border: 1px solid #000; /* Add a border for the square shape */
       border-radius: 0; /* Remove border radius to make it square */
       outline: none;
@@ -128,3 +129,11 @@ H1{  font-family: 'Instrument Serif', serif;}
   input[type="radio"]:checked {
       background-color: #000; /* Change the background color when checked */
   }
+
+  .artwork-container {
+    transition: border-bottom 0.3s; /* Optional: for smooth transition */
+}
+
+.artwork-container:hover {
+    border-bottom: 1px solid #000; /* Adjust the color and size as needed */
+}

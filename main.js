@@ -100,3 +100,34 @@ document.querySelectorAll('.grid-title').forEach(title => {
         sortItems(columnClass, this);
     });
 });
+
+
+//index image filter
+
+const imagesRadio = document.getElementById("images");
+const textRadio = document.getElementById("text");
+const indexItems = document.querySelectorAll(".index-item");
+
+// Add event listeners to radio buttons
+imagesRadio.addEventListener("change", () => {
+    filterItems("images");
+});
+
+textRadio.addEventListener("change", () => {
+    filterItems("text");
+});
+
+function filterItems(type) {
+    indexItems.forEach((item) => {
+        if (type === "images" && item.getAttribute("data-type") === "images") {
+            item.classList.remove("hidden");
+        } else if (type === "text" && item.getAttribute("data-type") === "text") {
+            item.classList.remove("hidden");
+        } else {
+            item.classList.add("hidden");
+        }
+    });
+}
+
+// Initialize the filter
+filterItems("images"); // Initially show images

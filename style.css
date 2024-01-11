@@ -92,3 +92,25 @@ sup{top:10px!important;padding-left:5px}
 
 }
 
+
+H1{  font-family: 'Instrument Serif', serif;}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;  font-family: 'Instrument Serif', serif;
+}
+
+/* Style each grid item */
+.grid-item {
+    padding: 10px;
+
+}
+       /* Style the radio buttons and labels */
+       .radio-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .radio-container label {
+        margin-right: 10px;
+    }

@@ -11,23 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
 
-    <style>
-        /* Define the CSS styles for the grid */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
-        }
-        
-        /* Style each grid item */
-        .grid-item {
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-    </style>
 </head>
 <body>
-    <h1>Artwork Information</h1>
+    <h1>INDEX/h1>
+        <!-- Radio buttons for choosing between "Images" and "Text" -->
+        <div class="radio-container">
+            <label for="images">Images:</label>
+            <input type="radio" id="images" name="displayType" value="images">
+            <label for="text">Text:</label>
+            <input type="radio" id="text" name="displayType" value="text">
+        </div>
     
     <!-- Create the grid container -->
     <div class="grid-container">

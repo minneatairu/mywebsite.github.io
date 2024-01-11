@@ -81,7 +81,6 @@ button {
 .carousel-item img {
   width: 100%;
   height: 100%;
-  /* Full height of the item */
   object-fit: cover;
 }
 

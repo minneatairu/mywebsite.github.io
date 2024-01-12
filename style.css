@@ -127,7 +127,7 @@ button {
 
 .biocolumn {
   flex-basis: calc(33.33% - 20px);
-  margin: 10px;
+  margin: 10px 5px;
 
 }
 
@@ -182,7 +182,6 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5px;
 }
 
 .menu-header a {

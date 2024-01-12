@@ -10,9 +10,17 @@ html {
 body {
   padding: 5px;
 }
+.carousel-item {
+  /* Existing styles */
+  transition: transform 0.5s ease-in; /* Adjust the duration and easing function as needed */
+}
 
 .exhibitions-label {margin-left: 30px;}
 div.carousel-counter{text-align: right;  font-family: 'Instrument Serif', serif;
+}
+#header-container {
+  min-height: 60px; /* Adjust this to match your header's height */
+  /* Other styles to match the header's look, possibly a loading indicator */
 }
 .carousel-container {
   display: flex;    flex-direction: column; /* This will stack children vertically */

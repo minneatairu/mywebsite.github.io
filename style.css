@@ -118,7 +118,7 @@ button {
 
 .carousel-button.prev {
   left: 5px;
-
+z-index: 2;
 }
 
 .carousel-button.next {
@@ -185,7 +185,10 @@ button {
     grid-template-columns: 1fr;
   }
 
-
+div.grid-item.year{position: absolute;right:10px}
+div.artwork-container{margin-top: 20px;}
+.artwork-container {
+  grid-template-columns: 1fr;}
 
 }
 

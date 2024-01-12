@@ -45,9 +45,7 @@ a{color: #000;}
   /* Flipped state pointing up */
 }
 
-div#yearTitle.grid-title {
-  text-align: right;
-}
+
 
 div#eventTitle.grid-title,
 div#hostTitle.grid-title,

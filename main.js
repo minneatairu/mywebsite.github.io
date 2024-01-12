@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const updateCounter = () => {
         const currentItemIndex = Math.round(scrollAmount / getScrollWidth());
-        counter.textContent = `${Math.min(currentItemIndex + itemsInView, totalItems)}/${totalItems}`;
+        counter.textContent = `${Math.min(currentItemIndex + itemsInView, totalItems)} of ${totalItems}`;
     };
 
     const getScrollWidth = () => {

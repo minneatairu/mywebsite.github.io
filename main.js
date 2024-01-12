@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const updateCounter = () => {
         const currentItemIndex = Math.round(scrollAmount / getScrollWidth());
-        counter.textContent = `${Math.min(currentItemIndex + itemsInView, totalItems)} of ${totalItems}`;
+        counter.textContent = `${Math.min(currentItemIndex + itemsInView, totalItems)}/${totalItems}`;
     };
 
     const getScrollWidth = () => {
@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial counter update
     updateCounter();
 });
+
 
 
 //RADIO: EVENTS
@@ -163,3 +164,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+//header
+
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.body.insertAdjacentHTML('afterbegin', data);
+      });
+  });
+  

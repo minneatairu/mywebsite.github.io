@@ -1,13 +1,21 @@
 // CAROUSEL: HOME
 document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector('.carousel');
+    const counter = document.querySelector('.carousel-counter');
+    const items = carousel.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
-    const carousel = document.querySelector('.carousel');
     let scrollAmount = 0;
+    let itemsInView = window.innerWidth <= 600 ? 1 : 3; // Number of items in view depends on the width
+
+    const updateCounter = () => {
+        const currentItemIndex = Math.round(scrollAmount / getScrollWidth());
+        counter.textContent = `${Math.min(currentItemIndex + itemsInView, totalItems)}/${totalItems}`;
+    };
 
     const getScrollWidth = () => {
-        // Get the width of a single item (100% on mobile)
-        return carousel.offsetWidth / (window.innerWidth <= 600 ? 1 : 3);
+        return carousel.offsetWidth / itemsInView;
     };
 
     nextButton.addEventListener('click', () => {
@@ -17,16 +25,22 @@ document.addEventListener("DOMContentLoaded", function () {
             left: scrollAmount,
             behavior: 'smooth'
         });
+        updateCounter();
     });
 
     prevButton.addEventListener('click', () => {
         scrollAmount -= getScrollWidth();
+        scrollAmount = Math.max(0, scrollAmount); // Prevent negative scroll amount
         carousel.scrollTo({
             top: 0,
             left: scrollAmount,
             behavior: 'smooth'
         });
+        updateCounter();
     });
+
+    // Initial counter update
+    updateCounter();
 });
 
 

@@ -12,7 +12,7 @@ body {
 }
 
 .exhibitions-label {margin-left: 30px;}
-.carousel-counter{text-align: right;  font-family: 'Instrument Serif', serif;
+div.carousel-counter{text-align: right;  font-family: 'Instrument Serif', serif;
 }
 .carousel-container {
   display: flex;

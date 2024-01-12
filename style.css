@@ -17,7 +17,7 @@ body {
 
 .exhibitions-label {margin-left: 30px;}
 div.carousel-counter{text-align: right;  font-family: 'Instrument Serif', serif;    bottom: 0;
-  margin-bottom: 5px;
+  margin-bottom: -1px;
   position: absolute;
   text-align: center;
   padding-left: 47%;
@@ -27,7 +27,7 @@ div.carousel-counter{text-align: right;  font-family: 'Instrument Serif', serif;
   /* Other styles to match the header's look, possibly a loading indicator */
 }
 .carousel-container {
-  display: flex;    flex-direction: column; height: 100%;
+  display: flex;    flex-direction: column; height:  calc(100% - 18px);;
 
   justify-content: center;
   width: 100%;

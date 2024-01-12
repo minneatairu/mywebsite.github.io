@@ -21,7 +21,7 @@ body {
 .portrait {
   grid-column: span 1;
 }
-
+.biotitle {margin-top: 40px;}
 .landscape {
   grid-column: span 2;
 }

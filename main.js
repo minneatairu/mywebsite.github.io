@@ -1,3 +1,13 @@
+//header
+
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      });
+  });
+
 // CAROUSEL: HOME
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector('.carousel');
@@ -164,14 +174,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-//header
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-container').innerHTML = data;
-      });
-  });
   

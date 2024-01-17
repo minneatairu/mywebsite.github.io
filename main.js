@@ -1,10 +1,35 @@
-//header
-fetch('header.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('header-container').innerHTML = data;
-  });
+// header - START
+document.addEventListener("DOMContentLoaded", function () {
+    
+    // Creating header through JS and showing on all pages
+    let header = document.createElement("div");
+    header.classList.add("menu-header");
 
+    // HOMEPAGE link
+    let linkHome =  document.createElement("a");
+    linkHome.href = 'https://minneatairu.com';
+    linkHome.innerText = "MINNE ATAIRU";
+
+    // BIOGRAPHY link
+    let linkBiography =  document.createElement("a");
+    linkBiography.href = 'biography';
+    linkBiography.innerText = "BIOGRAPHY";
+
+    // EVENTS link
+    let linkEvents =  document.createElement("a");
+    linkEvents.href = 'events';
+    linkEvents.innerText = "EVENTS";
+  
+    header.appendChild(linkHome)
+    header.appendChild(linkBiography)
+    header.appendChild(linkEvents)
+
+    document.getElementById('header-container').appendChild(header);
+
+});
+// header - END
+
+  
 // CAROUSEL: HOME
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector('.carousel');

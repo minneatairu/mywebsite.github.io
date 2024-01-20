@@ -199,12 +199,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
 // accordion
 
-function toggleAccordion(element) {
-    var content = element.nextElementSibling;
-    element.classList.toggle("active"); // Toggle the active class for smooth background color transition
-    if (content.style.maxHeight) {
-        content.style.maxHeight = null; // Close the accordion content
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px"; // Open the accordion content smoothly
-    }
-}
+     function toggleAccordion(element) {
+            var content = element.nextElementSibling;
+            element.classList.toggle("active"); // Toggle the active class for smooth background color transition
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null; // Close the accordion content
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px"; // Open or close the accordion content smoothly
+            }
+        }

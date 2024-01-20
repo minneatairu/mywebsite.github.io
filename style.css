@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-body,
+
 html {
   margin: 0;
   padding: 0;
@@ -28,7 +28,8 @@ html {
 }
 
 body {
-  padding: 5px;
+  padding: 10px 5px;  width: 100%;
+  height: 100%;
 }
 .carousel-item {
   /* Existing styles */
@@ -158,7 +159,6 @@ z-index: 2;
 
 .biocolumn {
   flex-basis: calc(33.33% - 20px);
-  margin: 10px 5px;
 
 }
 

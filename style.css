@@ -47,7 +47,7 @@ html {
 }
 .page-info {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-columns: 2fr 1fr; /* Two columns */
   column-gap: 10px; 
 }
 .image-grid img {

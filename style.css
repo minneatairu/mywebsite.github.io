@@ -39,7 +39,7 @@ a.link-ex{    background: yellow;text-transform: uppercase;
 
 .accordion-item.active + .accordion-content {
   max-height: 1000px; /* Adjust to your content's maximum height */
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .image-grid {
@@ -53,7 +53,8 @@ a.link-ex{    background: yellow;text-transform: uppercase;
 }
 .image-serial, .image-caption {
   display: inline-block; /* Display inline with block features */
-  margin: 0; /* Space between the serial and the caption */
+  margin: 0;     line-height: 1;
+
 }
 .page-info {
   display: grid;

@@ -19,16 +19,29 @@ html {
 }
 
 .accordion-item {
-  border-top: 1px solid #000;
+  border: 1px solid #ccc;
   padding: 10px;
   margin: 5px;
   cursor: pointer;
+  background-color: #f7f7f7;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 .accordion-content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  border-top: 1px solid #ccc;
+  transition: max-height 0.3s ease-in-out; /* Smooth transition for max-height */
+}
+
+.accordion-item.active {
+  background-color: #e0e0e0; /* Background color when active */
+}
+
+.accordion-item.active + .accordion-content {
+  max-height: 1000px; /* Adjust to your content's maximum height */
   padding: 10px;
-  border-top: 1px solid #000;
 }
 
 .image-grid {

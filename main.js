@@ -200,13 +200,11 @@ document.addEventListener('DOMContentLoaded', function () {
 // accordion
 
 function toggleAccordion(element) {
-    // Find the next sibling element (content)
     var content = element.nextElementSibling;
-
-    // Toggle the display of the content
-    if (content.style.display === "block") {
-        content.style.display = "none";
+    element.classList.toggle("active"); // Toggle the active class for smooth background color transition
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null; // Close the accordion content
     } else {
-        content.style.display = "block";
+        content.style.maxHeight = content.scrollHeight + "px"; // Open the accordion content smoothly
     }
 }

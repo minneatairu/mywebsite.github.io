@@ -12,26 +12,23 @@ html {
 
 }
 
- /* Add CSS for the accordion */
+ /* Add CSS for the accordion here */
  .accordion {
   display: flex;
   flex-direction: column;
 }
 
 .accordion-item {
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-}
-
-.accordion-header {
-  background-color: #f1f1f1;
+  border: 1px solid #000;
   padding: 10px;
+  margin: 5px;
   cursor: pointer;
 }
 
 .accordion-content {
   display: none;
   padding: 10px;
+  border-top: 1px solid #000;
 }
 
 .image-grid {

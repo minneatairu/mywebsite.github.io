@@ -197,3 +197,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
   
+// accordion
+
+function toggleAccordion(element) {
+    // Find the next sibling element (content)
+    var content = element.nextElementSibling;
+
+    // Toggle the display of the content
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}

@@ -15,7 +15,8 @@ html {
  /* Add CSS for the accordion here */
  .accordion {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  font-family: 'Instrument Serif', serif;    margin: 0;
+
 }
 
 .accordion-item {

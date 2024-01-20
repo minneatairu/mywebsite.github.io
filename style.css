@@ -16,7 +16,11 @@ html {
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   column-gap: 10px; 
 }
-
+.page-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  column-gap: 10px; 
+}
 .image-grid img {
   max-width: 100%;
   height: auto;
@@ -201,7 +205,7 @@ z-index: 2;
     display: none;
   }
 
-  .biocontainer {
+  .biocontainer,   .image-grid {
     grid-template-columns: 1fr;
   }
 

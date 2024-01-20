@@ -48,11 +48,11 @@ a.link-ex{    background: yellow;text-transform: uppercase;
 }
 .caption-container {
   display: flex;
-  justify-content: space-between; /* This distributes space evenly between the serial and the caption */
+  justify-content: space-between; margin-top: -2px;
 }
 .image-serial, .image-caption {
   display: inline-block; /* Display inline with block features */
-  margin: 0;     line-height: 1;
+  margin: 0;     line-height: 0.9;
 
 }
 .page-info {

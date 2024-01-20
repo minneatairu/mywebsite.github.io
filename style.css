@@ -49,7 +49,7 @@ a.link-ex{    background: yellow;text-transform: uppercase;
 }
 .page-info {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Two columns */
+  grid-template-columns: 0.5fr 2fr; /* Two columns */
   column-gap: 10px; 
 }
 .image-grid img {

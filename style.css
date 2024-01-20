@@ -45,7 +45,7 @@ a.link-ex{    background: yellow;text-transform: uppercase;
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
-  column-gap: 10px; 
+
 }
 .page-info {
   display: grid;

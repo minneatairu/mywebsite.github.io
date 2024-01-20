@@ -11,6 +11,20 @@ html {
   height: 100%;
 
 }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 10px; /* Adjust the gap between images as needed */
+}
+
+.image-grid img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-caption {
+  text-align: center;
+}
 
 body {
   padding: 5px;

@@ -47,7 +47,10 @@ a.link-ex{    background: yellow;text-transform: uppercase;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
 
 }
-
+.caption-container {
+  display: flex;
+  justify-content: space-between; /* This distributes space evenly between the serial and the caption */
+}
 .image-serial, .image-caption {
   display: inline-block; /* Display inline with block features */
   margin: 0; /* Space between the serial and the caption */

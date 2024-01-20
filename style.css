@@ -11,6 +11,29 @@ html {
   height: 100%;
 
 }
+
+ /* Add CSS for the accordion */
+ .accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
@@ -32,7 +55,8 @@ html {
 }
 
 body {
-  padding: 5px 10px; 
+  padding: 5px 10px;     margin: 0;
+
 }
 .carousel-item {
   /* Existing styles */

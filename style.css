@@ -28,7 +28,6 @@ html {
   max-height: 0;
   overflow: hidden;
   padding: 0 10px;
-  border-top: 1px solid #ccc;
   transition: max-height 0.3s ease-in-out; /* Smooth transition for max-height */
 }
 

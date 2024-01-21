@@ -43,14 +43,13 @@ a.link-ex{    background: yellow;text-transform: uppercase;
 .accordion-grid {
   display: grid;
   grid-template-columns: auto auto; /* Adjust the width as needed */
-  gap: 10px; /* Adjust the gap between columns as needed */
 }
 
 .accordion-grid-item {
   display: contents; /* This makes the child elements participate in the grid layout of the parent */
 }
-.accordion-grid-item:not(:first-child) .accordion-year {
-  border-top: 1px solid #000; /* Adjust the color and style of the border as needed */
+.accordion-title, .accordion-year {
+  border-bottom: 1px solid #000; padding-bottom: 10px;
 }
 
 

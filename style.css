@@ -42,7 +42,7 @@ a.link-ex{
 }
 .accordion-grid {
   display: grid;
-  grid-template-columns: auto auto; /* Adjust the width as needed */
+  grid-template-columns: 1fr 2fr; /* Adjust the width as needed */
 }
 
 .accordion-grid-item {

@@ -69,7 +69,7 @@ a.link-ex{
 }
 .page-info {
   display: grid;
-  grid-template-columns: 0.5fr 2fr; /* Two columns */
+  grid-template-columns: 1fr 2fr; /* Two columns */
   column-gap: 10px; 
 }
 .image-grid img {

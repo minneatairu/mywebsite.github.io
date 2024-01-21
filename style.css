@@ -49,7 +49,9 @@ a.link-ex{    background: yellow;text-transform: uppercase;
 .accordion-grid-item {
   display: contents; /* This makes the child elements participate in the grid layout of the parent */
 }
-
+.accordion-grid-item:not(:first-child) .accordion-year {
+  border-top: 1px solid #000; /* Adjust the color and style of the border as needed */
+}
 
 
 .image-grid {

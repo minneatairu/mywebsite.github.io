@@ -40,6 +40,21 @@ a.link-ex{    background: yellow;text-transform: uppercase;
   max-height: 1000px; /* Adjust to your content's maximum height */
   padding: 10px 0;
 }
+.accordion-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Adjust column widths as needed */
+  grid-gap: 10px; /* Adjust the gap between grid items */
+}
+
+.accordion-year {
+  font-size: 14px; /* Set the desired font size for years */
+  font-weight: bold; /* Optionally make the year text bold */
+}
+
+.accordion-title {
+  font-size: 18px; /* Set the desired font size for titles */
+  /* You can add additional styling for titles as needed */
+}
 
 .image-grid {
   display: grid;

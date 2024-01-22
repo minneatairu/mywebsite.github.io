@@ -53,9 +53,10 @@ a.link-ex{
 }
 .three-image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); column-gap: 10px;
-
+  grid-template-columns: repeat(3, 1fr); /* creates three columns of equal width */
+  grid-gap: 10px; /* adjust the gap between the columns */
 }
+
 
 .image-grid {
   display: grid;

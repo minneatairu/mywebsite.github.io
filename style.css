@@ -57,8 +57,8 @@ a.link-ex{
   grid-gap: 10px; /* adjust the gap between the columns */
 }
 .three-image-grid img {
-  max-width: 100%;
-  height: auto;
+margin-top: 10px;
+  height: auto;width: 100%;
 }
 
 .image-grid {

@@ -208,3 +208,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 content.style.maxHeight = content.scrollHeight + "px"; // Open or close the accordion content smoothly
             }
         }
+
+     // JavaScript to hide the caption after 15 seconds
+     document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            var caption = document.querySelector(".video-caption");
+            if (caption) {
+                caption.style.display = "none";
+            }
+        }, 15000); // 15 seconds
+    });

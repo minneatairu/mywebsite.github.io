@@ -27,11 +27,14 @@ video {
   /* CSS for the caption */
   .video-caption {
     position: absolute;
-    bottom: 10px; /* Adjust as needed for the desired vertical position */
-    left: 10px; /* Adjust as needed for the desired horizontal position */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
-    color: #fff; /* Text color */
-    padding: 10px; /* Padding around the caption text */
+    top: 0;
+    right: 0px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid;
+    font-family: 'Instrument Serif', serif; 
+
 }
 
 p{    text-align: justify;

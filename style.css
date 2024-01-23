@@ -18,6 +18,22 @@ video {
   height: 100%;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust the max-width as needed */
+}
+
+  /* CSS for the caption */
+  .video-caption {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed for the desired vertical position */
+    left: 10px; /* Adjust as needed for the desired horizontal position */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    color: #fff; /* Text color */
+    padding: 10px; /* Padding around the caption text */
+}
+
 p{    text-align: justify;
 }
  /* Add CSS for the accordion here */

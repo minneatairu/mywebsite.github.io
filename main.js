@@ -216,5 +216,5 @@ document.addEventListener('DOMContentLoaded', function () {
             if (caption) {
                 caption.style.display = "none";
             }
-        }, 15000); // 15 seconds
+        }, 45000); // 15 seconds
     });

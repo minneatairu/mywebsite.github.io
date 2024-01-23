@@ -21,7 +21,6 @@ video {
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 800px; /* Adjust the max-width as needed */
 }
 
   /* CSS for the caption */

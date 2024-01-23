@@ -56,7 +56,10 @@ a.link-ex{
   grid-template-columns: repeat(3, 1fr); /* creates three columns of equal width */
   grid-gap: 10px; /* adjust the gap between the columns */
 }
-
+.three-image-grid img {
+  max-width: 100%;
+  height: auto;
+}
 
 .image-grid {
   display: grid;

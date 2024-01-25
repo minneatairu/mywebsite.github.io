@@ -106,7 +106,7 @@ margin-top: 10px;
   column-gap: 10px; 
 }
 .image-grid img {
-  max-width: 100%;
+width: 100%;
   height: auto;
 }
 

@@ -41,6 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let scrollAmount = 0;
     let itemsInView = window.innerWidth <= 600 ? 1 : 3; // Number of items in view depends on the width
 
+    const updateBlur = () => {
+        items.forEach((item, index) => {
+            const currentItemIndex = Math.round(scrollAmount / getScrollWidth());
+            if (index >= currentItemIndex && index < currentItemIndex + itemsInView) {
+                item.classList.remove('blurred');
+            } else {
+                item.classList.add('blurred');
+            }
+        });
+    };
+
     const updateCounter = () => {
         const currentItemIndex = Math.round(scrollAmount / getScrollWidth());
         counter.textContent = `${Math.min(currentItemIndex + itemsInView, totalItems)}/${totalItems}`;
@@ -58,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: 'smooth'
         });
         updateCounter();
+        updateBlur();
     });
 
     prevButton.addEventListener('click', () => {
@@ -69,11 +81,14 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: 'smooth'
         });
         updateCounter();
+        updateBlur();
     });
 
-    // Initial counter update
+    // Initial counter update and blur
     updateCounter();
+    updateBlur();
 });
+
 
 
 

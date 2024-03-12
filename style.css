@@ -122,7 +122,8 @@ body {
 
 }
 .carousel-item {
-
+  display: flex;
+  justify-content: center;
   transition: transform 0.5s ease-in; /* Adjust the duration and easing function as needed */
 }
 
@@ -138,7 +139,7 @@ div.carousel-counter{text-align: right;  font-family: 'Epilogue', sans-serif;   
   /* Other styles to match the header's look, possibly a loading indicator */
 }
 .carousel-container {
-  display: flex;    flex-direction: column; height:  calc(100% - 18px);;
+  display: flex;    flex-direction: column; height:  calc(100% - 18px);
 
   justify-content: center;
   width: 100%;

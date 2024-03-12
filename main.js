@@ -32,34 +32,42 @@ document.addEventListener("DOMContentLoaded", function () {
   
 // CAROUSEL: HOME
 document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll('.carousel-item');
+    const carousel = document.querySelector('.carousel');
+    const items = carousel.querySelectorAll('.carousel-item');
     const totalItems = items.length;
-    const counter = document.querySelector('.carousel-counter');
-    let currentItem = 0; // Start with the first item
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentIndex = 0; // Keep track of the current item
 
     const updateCounter = () => {
-        counter.textContent = `${currentItem + 1}/${totalItems}`;
+        const counter = document.querySelector('.carousel-counter');
+        counter.textContent = `${currentIndex + 1}/${totalItems}`;
     };
 
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
-
-    const changeItem = (next) => {
-        items[currentItem].classList.remove('active'); // Hide the current item
-        currentItem += next ? 1 : -1; // Determine the next item index
-        if (currentItem >= totalItems) { currentItem = 0; } // Loop to start if at the end
-        if (currentItem < 0) { currentItem = totalItems - 1; } // Loop to end if at the start
-        items[currentItem].classList.add('active'); // Show the new item
+    const setActiveItem = (index) => {
+        items.forEach((item, i) => {
+            item.classList.remove('active');
+            if (i === index) {
+                item.classList.add('active');
+            }
+        });
         updateCounter();
     };
 
-    nextButton.addEventListener('click', () => changeItem(true));
-    prevButton.addEventListener('click', () => changeItem(false));
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalItems; // Loop back to the first item after the last
+        setActiveItem(currentIndex);
+    });
 
-    // Initial setup
-    items[0].classList.add('active'); // Show the first item initially
-    updateCounter();
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Loop to the last item if moving back from the first
+        setActiveItem(currentIndex);
+    });
+
+    // Set the first item as active initially
+    setActiveItem(0);
 });
+
 
 
 

@@ -396,5 +396,5 @@ input[type="radio"]:checked {
   background-color: rgba(0,0,0,0.8);
 }
 .project-page{padding: 0;}
-.page-close{text-decoration: none;}
+a.page-close{text-decoration: none;}
 img.page-image{width: 100%;}

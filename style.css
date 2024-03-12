@@ -121,28 +121,9 @@ body {
   padding:0;     margin: 0;
 
 }
-
-
-.carousel {
-  position: relative;
-  overflow: hidden;
-}
-
 .carousel-item {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0; /* Start all items as invisible */
-  transition: opacity 1s ease; /* Adjust time as needed */
-  /* Ensure the item content is centered or aligned as needed */
-}
 
-
-
-
-.carousel-item.active {
-  opacity: 1; /* The active item is fully visible */
+  transition: transform 0.5s ease-in; /* Adjust the duration and easing function as needed */
 }
 
 .exhibitions-label {margin-left: 30px;}
@@ -231,7 +212,12 @@ button {
   scroll-snap-type: x mandatory;
 }
 
+.carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  width: 100%;
 
+}
 
 .carousel-item img {
   height: 100%;

@@ -33,61 +33,47 @@ document.addEventListener("DOMContentLoaded", function () {
 // CAROUSEL: HOME
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector('.carousel');
-    const counter = document.querySelector('.carousel-counter');
     const items = carousel.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    let scrollAmount = 0;
     let itemsInView = window.innerWidth <= 600 ? 1 : 3; // Number of items in view depends on the width
+    const getScrollWidth = () => carousel.offsetWidth / itemsInView;
+    let scrollAmount = 0;
 
+    // Function to update the blur effect
     const updateBlur = () => {
         items.forEach((item, index) => {
-            const currentItemIndex = Math.round(scrollAmount / getScrollWidth());
-            if (index >= currentItemIndex && index < currentItemIndex + itemsInView) {
-                item.classList.remove('blurred');
-            } else {
-                item.classList.add('blurred');
-            }
+            item.classList.add('blurred'); // Add blur to all items
         });
+        const currentItemIndex = Math.floor(scrollAmount / getScrollWidth()) + Math.floor(itemsInView / 2);
+        if(items[currentItemIndex]) {
+            items[currentItemIndex].classList.remove('blurred'); // Remove blur from the middle item
+            items[currentItemIndex].classList.add('active'); // Highlight the middle item
+        }
     };
 
-    const updateCounter = () => {
-        const currentItemIndex = Math.round(scrollAmount / getScrollWidth());
-        counter.textContent = `${Math.min(currentItemIndex + itemsInView, totalItems)}/${totalItems}`;
-    };
-
-    const getScrollWidth = () => {
-        return carousel.offsetWidth / itemsInView;
-    };
-
-    nextButton.addEventListener('click', () => {
-        scrollAmount += getScrollWidth();
-        carousel.scrollTo({
-            top: 0,
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-        updateCounter();
-        updateBlur();
-    });
-
-    prevButton.addEventListener('click', () => {
+    // Attach scroll event listeners to next and prev buttons
+    document.querySelector('.prev').addEventListener('click', () => {
         scrollAmount -= getScrollWidth();
-        scrollAmount = Math.max(0, scrollAmount); // Prevent negative scroll amount
-        carousel.scrollTo({
-            top: 0,
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-        updateCounter();
+        scrollAmount = Math.max(0, scrollAmount);
+        carousel.scrollTo({ top: 0, left: scrollAmount, behavior: 'smooth' });
         updateBlur();
     });
 
-    // Initial counter update and blur
-    updateCounter();
+    document.querySelector('.next').addEventListener('click', () => {
+        scrollAmount += getScrollWidth();
+        carousel.scrollTo({ top: 0, left: scrollAmount, behavior: 'smooth' });
+        updateBlur();
+    });
+
+    // Initial update for blur effect
     updateBlur();
+
+    // Update on resize to handle responsive design
+    window.addEventListener('resize', () => {
+        itemsInView = window.innerWidth <= 600 ? 1 : 3;
+        updateBlur();
+    });
 });
+
 
 
 

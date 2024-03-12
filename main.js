@@ -218,3 +218,39 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, 45000); // 15 seconds
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var index = 0; // Start at the first slide
+        var slides = document.getElementsByClassName("page-carousel-item");
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+    
+        function showSlide(n) {
+            // Hide all slides
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            // Show the specified slide
+            slides[n].style.display = "block";
+        }
+    
+        function nextSlide() {
+            index++;
+            if (index >= slides.length) index = 0; // Loop back to first slide
+            showSlide(index);
+        }
+    
+        function prevSlide() {
+            index--;
+            if (index < 0) index = slides.length - 1; // Loop back to last slide
+            showSlide(index);
+        }
+    
+        // Initial display
+        showSlide(index);
+    
+        // Event listeners for next and previous
+        next.addEventListener("click", nextSlide);
+        prev.addEventListener("click", prevSlide);
+    });
+    

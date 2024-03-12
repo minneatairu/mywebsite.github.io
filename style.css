@@ -397,4 +397,4 @@ input[type="radio"]:checked {
 }
 body.project-page{padding: 0;}
 a.page-close{text-decoration: none;}
-img.page-image{width: 100%;}
+img.page-image{height:100vh;}

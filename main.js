@@ -32,51 +32,35 @@ document.addEventListener("DOMContentLoaded", function () {
   
 // CAROUSEL: HOME
 document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector('.carousel');
-    const counter = document.querySelector('.carousel-counter');
-    const items = carousel.querySelectorAll('.carousel-item');
+    const items = document.querySelectorAll('.carousel-item');
     const totalItems = items.length;
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    let scrollAmount = 0;
-    let itemsInView = 1; // Set itemsInView to 1 to ensure only one item is shown at a time
+    const counter = document.querySelector('.carousel-counter');
+    let currentItem = 0; // Start with the first item
 
     const updateCounter = () => {
-        const currentItemIndex = Math.round(scrollAmount / getScrollWidth());
-        counter.textContent = `${currentItemIndex + 1}/${totalItems}`;
+        counter.textContent = `${currentItem + 1}/${totalItems}`;
     };
 
-    const getScrollWidth = () => {
-        return carousel.offsetWidth; // Since we are showing one item at a time, the scroll width is the full offsetWidth of the carousel
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+
+    const changeItem = (next) => {
+        items[currentItem].classList.remove('active'); // Hide the current item
+        currentItem += next ? 1 : -1; // Determine the next item index
+        if (currentItem >= totalItems) { currentItem = 0; } // Loop to start if at the end
+        if (currentItem < 0) { currentItem = totalItems - 1; } // Loop to end if at the start
+        items[currentItem].classList.add('active'); // Show the new item
+        updateCounter();
     };
 
-    nextButton.addEventListener('click', () => {
-        if (scrollAmount < getScrollWidth() * (totalItems - 1)) { // Ensure we don't scroll beyond the last item
-            scrollAmount += getScrollWidth();
-            carousel.scrollTo({
-                top: 0,
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-            updateCounter();
-        }
-    });
+    nextButton.addEventListener('click', () => changeItem(true));
+    prevButton.addEventListener('click', () => changeItem(false));
 
-    prevButton.addEventListener('click', () => {
-        if (scrollAmount > 0) { // Ensure we don't scroll before the first item
-            scrollAmount -= getScrollWidth();
-            carousel.scrollTo({
-                top: 0,
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-            updateCounter();
-        }
-    });
-
-    // Initial counter update
+    // Initial setup
+    items[0].classList.add('active'); // Show the first item initially
     updateCounter();
 });
+
 
 
 

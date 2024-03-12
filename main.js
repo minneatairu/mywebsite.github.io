@@ -39,41 +39,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     let scrollAmount = 0;
-    let itemsInView = window.innerWidth <= 600 ? 1 : 3; // Number of items in view depends on the width
+    let itemsInView = 1; // Set itemsInView to 1 to ensure only one item is shown at a time
 
     const updateCounter = () => {
         const currentItemIndex = Math.round(scrollAmount / getScrollWidth());
-        counter.textContent = `${Math.min(currentItemIndex + itemsInView, totalItems)}/${totalItems}`;
+        counter.textContent = `${currentItemIndex + 1}/${totalItems}`;
     };
 
     const getScrollWidth = () => {
-        return carousel.offsetWidth / itemsInView;
+        return carousel.offsetWidth; // Since we are showing one item at a time, the scroll width is the full offsetWidth of the carousel
     };
 
     nextButton.addEventListener('click', () => {
-        scrollAmount += getScrollWidth();
-        carousel.scrollTo({
-            top: 0,
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-        updateCounter();
+        if (scrollAmount < getScrollWidth() * (totalItems - 1)) { // Ensure we don't scroll beyond the last item
+            scrollAmount += getScrollWidth();
+            carousel.scrollTo({
+                top: 0,
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+            updateCounter();
+        }
     });
 
     prevButton.addEventListener('click', () => {
-        scrollAmount -= getScrollWidth();
-        scrollAmount = Math.max(0, scrollAmount); // Prevent negative scroll amount
-        carousel.scrollTo({
-            top: 0,
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-        updateCounter();
+        if (scrollAmount > 0) { // Ensure we don't scroll before the first item
+            scrollAmount -= getScrollWidth();
+            carousel.scrollTo({
+                top: 0,
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+            updateCounter();
+        }
     });
 
     // Initial counter update
     updateCounter();
 });
+
 
 
 

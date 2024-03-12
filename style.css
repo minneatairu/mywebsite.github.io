@@ -124,7 +124,7 @@ body {
 .carousel-item {
   display: flex;
   justify-content: center;
-  transition: transform 0.5s ease-in; /* Adjust the duration and easing function as needed */
+  transition: transform 0.5s ease-in;padding:10%
 }
 
 .exhibitions-label {margin-left: 30px;}

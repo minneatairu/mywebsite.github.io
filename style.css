@@ -409,7 +409,7 @@ img.page-image{height:100vh;}
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-background-color: #fff;
+background-color: #000;color: ;
 }
 
 /* Modal Content */
@@ -417,6 +417,10 @@ background-color: #fff;
   padding: 20px;
   width: 100%
 }
+.list-items{    color: #fff;
+  opacity: .3;}
+  .list-item:hover{  
+    opacity: 1;}
 
 /* The Close Button */
 .close {

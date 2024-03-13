@@ -417,8 +417,9 @@ background-color: #000;color: ;
   padding: 20px;
   width: 100%
 }
-.list-item{    color: #fff;    mix-blend-mode: screen;
+.list-item{    color: #fff;   
   opacity: .3;}
+
   .list-item:hover{  
     opacity: 1;}
 
@@ -426,7 +427,7 @@ background-color: #000;color: ;
 .close {
   position: absolute;
 right: 10px;
-  cursor: pointer;color: #fff;
+  cursor: pointer;color: #fff;z-index: 999;
   top: 10px;}
 
 

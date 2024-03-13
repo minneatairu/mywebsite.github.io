@@ -525,8 +525,7 @@ img.page-image {
 
 .list-item {
   display: grid;
-  grid-template-columns: 1fr auto auto; /* Adjust column sizes as needed */
-  gap: 20px; /* Space between grid items */
+  grid-template-columns: 2fr 1fr 1fr;  gap: 20px; /* Space between grid items */
   align-items: center; /* Align items vertically in the center */
   margin-bottom: 10px; text-transform: uppercase;
 }

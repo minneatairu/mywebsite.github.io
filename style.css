@@ -528,7 +528,7 @@ img.page-image {
   grid-template-columns: 1fr auto auto; /* Adjust column sizes as needed */
   gap: 20px; /* Space between grid items */
   align-items: center; /* Align items vertically in the center */
-  margin-bottom: 10px; 
+  margin-bottom: 10px; text-transform: uppercase;
 }
 
 /* The Close Button */

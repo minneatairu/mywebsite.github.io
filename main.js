@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // BIOGRAPHY link
     let linkBiography =  document.createElement("a");
     linkBiography.href = 'biography';
-    linkBiography.innerText = "BIOGRAPHY";
+    linkBiography.innerText = "INFO";
 
     // EVENTS link
     let linkEvents =  document.createElement("a");
     linkEvents.href = 'events';
-    linkEvents.innerText = "EVENTS";
+    linkEvents.innerText = "VIEW BY LIST";
   
     header.appendChild(linkHome)
     header.appendChild(linkBiography)

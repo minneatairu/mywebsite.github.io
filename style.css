@@ -524,11 +524,11 @@ img.page-image {
 
 
 .list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  /* Add some space below each list item */
+  display: grid;
+  grid-template-columns: 1fr auto auto; /* Adjust column sizes as needed */
+  gap: 20px; /* Space between grid items */
+  align-items: center; /* Align items vertically in the center */
+  margin-bottom: 10px; 
 }
 
 /* The Close Button */

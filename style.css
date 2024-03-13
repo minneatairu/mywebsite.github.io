@@ -507,19 +507,19 @@ img.page-image {
 
 .item-title {
   color: #fff;
-  opacity: .3;
+  opacity: .3;  transition: opacity 0.3s ease;
 }
 
-.item-title:hover,
-.item-date:hover,
-.item-category:hover {
-  opacity: 1;
+.list-item:hover .item-title,
+.list-item:hover .item-category,
+.list-item:hover .item-date {
+  opacity: 1; /* Change opacity to 1 when parent .list-item is hovered */
 }
 
 .item-category,
 .item-date {
   color: #fff;
-  opacity: 0;
+  opacity: 0; 
 }
 
 

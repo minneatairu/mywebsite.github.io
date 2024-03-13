@@ -395,7 +395,7 @@ input[type="radio"]:checked {
 
 }
 
-
+p#viewByList.list-archive{cursor: pointer;}
 body.project-page{padding: 0;}
 a.page-close{text-decoration: none;}
 img.page-image{height:100vh;}

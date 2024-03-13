@@ -417,7 +417,7 @@ background-color: #000;color: ;
   padding: 20px;
   width: 100%
 }
-.list-items{    color: #fff;
+.list-item{    color: #fff;    mix-blend-mode: screen;
   opacity: .3;}
   .list-item:hover{  
     opacity: 1;}

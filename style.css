@@ -426,7 +426,7 @@ background-color: #000;color: ;
 .close {
   position: absolute;
 right: 10px;
-  cursor: pointer;
+  cursor: pointer;color: #fff;
   top: 10px;}
 
 

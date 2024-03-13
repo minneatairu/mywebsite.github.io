@@ -1,5 +1,5 @@
 /* Fix Header alignment issue on biography page */
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -24,131 +24,189 @@ video {
   width: 100%;
 }
 
-  /* CSS for the caption */
-  .video-caption {
-    position: absolute;
-    top: 0;
-    right: 0px;
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border: 1px solid;
-    font-family: 'Epilogue', sans-serif; 
+/* CSS for the caption */
+.video-caption {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid;
+  font-family: 'Epilogue', sans-serif;
 
 }
 
-p{    text-align: justify;
+p {
+  text-align: justify;
 }
- /* Add CSS for the accordion here */
- .accordion {
+
+/* Add CSS for the accordion here */
+.accordion {
   display: flex;
-  flex-direction: column;  font-family: 'Epilogue', sans-serif;    margin: 0;
+  flex-direction: column;
+  font-family: 'Epilogue', sans-serif;
+  margin: 0;
 
 }
-a.link-ex{  
+
+a.link-ex {
   border: 1px solid;
   padding: 0px 5px;
-  text-decoration: none;}
-  
+  text-decoration: none;
+}
+
 .accordion-item {
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
 }
 
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out; /* Smooth transition for max-height */
+  transition: max-height 0.3s ease-in-out;
+  /* Smooth transition for max-height */
 }
 
 
-.accordion-item.active + .accordion-content {
-  max-height: 1000px; /* Adjust to your content's maximum height */
+.accordion-item.active+.accordion-content {
+  max-height: 1000px;
+  /* Adjust to your content's maximum height */
   padding: 10px 0;
 }
+
 .accordion-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Adjust the width as needed */
+  grid-template-columns: 1fr 2fr;
+  /* Adjust the width as needed */
 }
 
 .accordion-grid-item {
-  display: contents; /* This makes the child elements participate in the grid layout of the parent */
+  display: contents;
+  /* This makes the child elements participate in the grid layout of the parent */
 }
-.accordion-title, .accordion-year {
-  border-bottom: 1px solid #000; padding: 10px 0;
+
+.accordion-title,
+.accordion-year {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
 }
+
 .three-image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* creates three columns of equal width */
-  grid-gap: 10px; /* adjust the gap between the columns */
+  grid-template-columns: repeat(3, 1fr);
+  /* creates three columns of equal width */
+  grid-gap: 10px;
+  /* adjust the gap between the columns */
 }
+
 .three-image-grid img {
-margin-top: 10px;
-  height: auto;width: 100%;
+  margin-top: 10px;
+  height: auto;
+  width: 100%;
 }
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); column-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
 
 }
-.page-close{position: absolute;right: 10px;top:10px}
+
+.page-close {
+  position: absolute;
+  right: 10px;
+  top: 10px
+}
+
 .caption-container {
   display: flex;
-  justify-content: space-between; margin-top: -2px;
+  justify-content: space-between;
+  margin-top: -2px;
 }
-.image-serial, .image-caption {
-  display: inline-block; /* Display inline with block features */
-  margin: 0;     line-height: 0.9;
+
+.image-serial,
+.image-caption {
+  display: inline-block;
+  /* Display inline with block features */
+  margin: 0;
+  line-height: 0.9;
 
 }
+
 .page-info {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
-  column-gap: 10px; 
+  grid-template-columns: 1fr 1fr;
+  /* Two columns */
+  column-gap: 10px;
 }
+
 .image-grid img {
-width: 100%;
+  width: 100%;
   height: auto;
 }
 
 .image-caption {
-  font-family: 'Epilogue', sans-serif;    margin: 0;
+  font-family: 'Epilogue', sans-serif;
+  margin: 0;
   line-height: 1;
 }
 
 body {
-  padding:5PX;     margin: 0;
+  padding: 5PX;
+  margin: 0;
 
 }
+
 .carousel-item {
   display: flex;
   justify-content: center;
-  transition: transform 0.5s ease-in;padding:5%
+  transition: transform 0.5s ease-in;
+  padding: 5%
 }
 
-.exhibitions-label {margin-left: 30px;}
-div.carousel-counter{text-align: right;  font-family: 'Epilogue', sans-serif;    bottom: 0;
+.exhibitions-label {
+  margin-left: 30px;
+}
+
+div.carousel-counter {
+  text-align: right;
+  font-family: 'Epilogue', sans-serif;
+  bottom: 0;
   margin-bottom: -1px;
   position: absolute;
   text-align: center;
   padding-left: 47%;
 }
+
 #header-container {
-  min-height: 18px; /* Adjust this to match your header's height */
+  min-height: 18px;
+  /* Adjust this to match your header's height */
   /* Other styles to match the header's look, possibly a loading indicator */
 }
+
 .carousel-container {
-  display: flex;    flex-direction: column; height:  calc(100% - 18px);
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 18px);
 
   justify-content: center;
   width: 100%;
 }
-a{color: #000;}
+
+a {
+  color: #000;
+}
+
 .portrait {
   grid-column: span 1;
 }
-.biotitle {margin-top: 40px;}
+
+.biotitle {
+  margin-top: 40px;
+}
+
 .landscape {
   grid-column: span 2;
 }
@@ -232,7 +290,7 @@ button {
 
 .carousel-button.prev {
   left: 5px;
-z-index: 2;
+  z-index: 2;
 }
 
 .carousel-button.next {
@@ -260,7 +318,8 @@ z-index: 2;
 .caption-text sup {
   top: 10px;
   padding-left: 5px;
-  vertical-align: top; /* Aligns sup tag with the baseline of the text */
+  vertical-align: top;
+  /* Aligns sup tag with the baseline of the text */
 
 }
 
@@ -283,7 +342,8 @@ z-index: 2;
 
   /* Adjust the max-width as needed */
   .carousel-item {
-    flex: 0 0 100%;padding: 0;
+    flex: 0 0 100%;
+    padding: 0;
   }
 
   .index-container {
@@ -294,14 +354,25 @@ z-index: 2;
     display: none;
   }
 
-  .biocontainer,   .image-grid, .page-info, .three-image-grid {
+  .biocontainer,
+  .image-grid,
+  .page-info,
+  .three-image-grid {
     grid-template-columns: 1fr;
   }
 
-div.grid-item.year{position: absolute;right:10px}
-div.artwork-container{margin-top: 30px;}
-.artwork-container {
-  grid-template-columns: 1fr;}
+  div.grid-item.year {
+    position: absolute;
+    right: 10px
+  }
+
+  div.artwork-container {
+    margin-top: 30px;
+  }
+
+  .artwork-container {
+    grid-template-columns: 1fr;
+  }
 
 }
 
@@ -392,21 +463,40 @@ input[type="radio"]:checked {
 
 }
 
-p#viewByList.list-archive{cursor: pointer;}
-body.project-page{padding: 0;}
-a.page-close{text-decoration: none;}
-img.page-image{height:100vh;}
+p#viewByList.list-archive {
+  cursor: pointer;
+}
+
+body.project-page {
+  padding: 0;
+}
+
+a.page-close {
+  text-decoration: none;
+}
+
+img.page-image {
+  height: 100vh;
+}
+
 /* The Modal (background) */
 .listmodal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-background-color: #000;color: #fff
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000;
+  color: #fff
 }
 
 /* Modal Content */
@@ -414,28 +504,39 @@ background-color: #000;color: #fff
   padding: 20px;
   width: 100%
 }
-.item-title{    color: #fff;   
-  opacity: .3;}
 
-  .item-title:hover,  .item-date:hover,  .item-category:hover{  
-    opacity: 1;}
+.item-title {
+  color: #fff;
+  opacity: .3;
+}
 
-    .item-category, .item-date{    color: #fff;   
-      opacity: 0;}
+.item-title:hover,
+.item-date:hover,
+.item-category:hover {
+  opacity: 1;
+}
+
+.item-category,
+.item-date {
+  color: #fff;
+  opacity: 0;
+}
 
 
-    .list-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px; /* Add some space below each list item */
-    }
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  /* Add some space below each list item */
+}
 
 /* The Close Button */
 .close {
   position: absolute;
-right: 10px;
-  cursor: pointer;color: #fff;z-index: 999;
-  top: 10px;}
-
-
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 999;
+  top: 10px;
+}

@@ -417,11 +417,22 @@ background-color: #000;color: ;
   padding: 20px;
   width: 100%
 }
-.list-item{    color: #fff;   
+.item-title{    color: #fff;   
   opacity: .3;}
 
-  .list-item:hover{  
+  .item-title:hover,  .item-date:hover,  .item-category:hover{  
     opacity: 1;}
+
+    .item-category, .item-date{    color: #fff;   
+      opacity: 0;}
+
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px; /* Add some space below each list item */
+    }
 
 /* The Close Button */
 .close {

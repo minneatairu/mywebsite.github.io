@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // BIOGRAPHY link
     let linkBiography =  document.createElement("a");
-    linkBiography.href = 'biography';
+    linkBiography.href = 'info';
     linkBiography.innerText = "INFO";
 
     // EVENTS link

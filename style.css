@@ -409,7 +409,7 @@ img.page-image{height:100vh;}
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-
+background-color: #fff;
 }
 
 /* Modal Content */
@@ -424,7 +424,7 @@ img.page-image{height:100vh;}
 .close {
   float: right;
   font-size: 28px;
-
+cursor: pointer;
 }
 
 

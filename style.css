@@ -422,9 +422,9 @@ background-color: #fff;
 
 /* The Close Button */
 .close {
-  float: right;
-  font-size: 28px;
-cursor: pointer;
-}
+  position: absolute;
+right: 10px;
+  cursor: pointer;
+  top: 10px;}
 
 
